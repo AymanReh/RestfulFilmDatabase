@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Bones Films</title>
+<link rel="stylesheet" href="films.css">
+</head>
+<body>
+<label for="format">Select data format</label>
+<select id="format" name="format">
+<option value="application/json">JSON</option>
+<option value="application/xml">XML</option>
+<option value="text/plain">TEXT</option>
+</select>
+<input type="button" onclick ='jsonFilmTable("format", "read")' value="Show Films"/>
+<div align="center">
+<fieldset>
+<div class="send">
+INSERT NEW FILM<br>
+Title: <input type="text" name="title" id="title"><br>
+Year: <input type="text" name="year" id="year"><br>
+Director: <input type="text" name="dir" id="dir"><br>
+Stars: <input type="text" name="star" id="star"><br>
+Review: <input type="text" name="review" id="review"><br>
+<input id="jsonPost" type="submit" name="submit" onclick='jsonPostFilm("format", "write")'><br>
+<div id="write" class="write">
+</div>
+
+<div id="read" >
+ </div>
+</fieldset>
+
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="./script/javaTables.js" type="text/javascript">
+ </script>
+
+<script src="./script/getFilms.js" type="text/javascript">
+</script>
+<script src="./script/postFilm.js" type="text/javascript">
+</script>
+<script src="./script/putFilm.js" type="text/javascript">
+</script>
+<script src="./script/deleteFilm.js" type="text/javascript">
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</html>
